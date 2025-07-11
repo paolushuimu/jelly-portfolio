@@ -56,10 +56,7 @@ function ProjectSlider({ project }) {
               alt={`slide-${i}`}
               className="swiper-lazy h-full w-auto object-contain"
             />
-            <div className="swiper-lazy-preloader">
-              {/* {console.log(img.src)} */}
-              {/* {console.log(img.ratio * targetHeight)} */}
-            </div>
+            <div className="swiper-lazy-preloader"></div>
           </SwiperSlide>
         ))}
       </Swiper>
