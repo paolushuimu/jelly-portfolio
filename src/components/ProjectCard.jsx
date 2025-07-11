@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef, forwardRef } from "react";
 
 import ProjectSlider from "./ProjectSlider";
 
-const ProjectCard = ({ project, trigger }) => {
+const ProjectCard = forwardRef(({ project, trigger, shouldScroll }) => {
   // 控制项目卡片是否展开的状态
   const [isOpen, setIsOpen] = useState(false);
   // 控制鼠标滚动的状态
   const [isScrolled, setIsScrolled] = useState(false);
+  const cardRef = useRef(null);
+
   useEffect(() => {
     setIsScrolled(true);
     const timeout = setTimeout(() => {
@@ -15,8 +17,37 @@ const ProjectCard = ({ project, trigger }) => {
     return () => clearTimeout(timeout);
   }, [trigger]);
 
+  //搜索后滚动到相应位置
+  useEffect(() => {
+    if (shouldScroll && cardRef.current) {
+      setTimeout(() => {
+        cardRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }, 1000);
+    }
+  }, []);
+
+  //卡片点击处理
+  const handleCardClick = () => {
+    if (!isOpen) {
+      setIsOpen(true);
+      setTimeout(() => {
+        cardRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }, 100);
+    } else {
+      cardRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
   return (
     <div
+      ref={cardRef}
+      onClick={handleCardClick}
       className={`transition-transform duration-1000 ${
         isScrolled ? "scale-90" : "scale-100"
       }`}
@@ -64,7 +95,10 @@ const ProjectCard = ({ project, trigger }) => {
             </div>
 
             <button
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                e.stopPropagation(); //阻止冒泡
+                setIsOpen(false);
+              }}
               className="text-gray-500 hover:text-red-500 ml-4"
             >
               收起
@@ -77,6 +111,6 @@ const ProjectCard = ({ project, trigger }) => {
       )}
     </div>
   );
-};
+});
 
 export default ProjectCard;

@@ -11,7 +11,7 @@ function Home() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  });
+  }, []);
 
   return (
     <div className="relative w-full pt-16 flex flex-col space-y-8">

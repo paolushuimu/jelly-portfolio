@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import Search from "./Search";
+
 function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div className="w-full px-6 py-3 flex justify-between items-center">
+    <nav className="fixed top-0 left-0 w-full h-16 bg-white shadow-md z-50">
+      <div className="w-full h-full px-6 flex justify-between items-center">
         {/* LOGO + 下拉菜单 */}
         <div className="relative">
           <button
@@ -47,13 +49,7 @@ function Navbar() {
         </div>
 
         {/* 搜索框 */}
-        <div>
-          <input
-            type="text"
-            placeholder="Search..."
-            className="w-40 border rounded px-3 py-1 focus:outline-none focus:ring-2 focus:ring-green-400"
-          />
-        </div>
+        <Search />
       </div>
     </nav>
   );
