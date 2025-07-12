@@ -11,7 +11,7 @@ function App() {
       <div className="w-[80rem] mx-auto">
         <Routes>
           {/* <Route path="/" element={<LogoPage />}></Route> */}
-          <Route path="/projects" element={<Project />}></Route>
+          <Route path="/" element={<Project />}></Route>
         </Routes>
       </div>
       <Footer />
