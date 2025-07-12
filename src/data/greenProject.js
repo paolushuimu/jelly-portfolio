@@ -1,7 +1,7 @@
 const greenProjects = [
   {
-    id: "1",
-    page: "",
+    id: "fenglangdaoju",
+    page: "GREEN",
     title: "风廊稻居",
     subtitle: "可自维持性民居及公共服务建筑",
     place: "河北省张家口市二堡子村",
@@ -48,8 +48,8 @@ const greenProjects = [
     ],
   },
   {
-    id: "2",
-    page: "",
+    id: "haidaoshouwangzhijia",
+    page: "GREEN",
     title: "海岛守望之家",
     subtitle: "老人日间照料中心",
     place: "浙江省舟山市柴山岛",

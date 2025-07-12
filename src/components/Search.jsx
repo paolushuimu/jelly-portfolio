@@ -14,7 +14,7 @@ function Search() {
     if (e.key === "Enter") {
       allProjects.forEach((item) => {
         if (inputValue === item.title) {
-          navigate(`/${item.page}`, {
+          navigate("/projects", {
             state: {
               scrollId: item.id,
               page: item.page,

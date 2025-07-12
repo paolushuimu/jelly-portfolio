@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 
 import Search from "./Search";
 
-function Navbar() {
+function Navbar({ activeTab, setActiveTab }) {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const tabs = ["GREEN", "MODERN", "TRADITIONAL", "FIELD"];
+  console.log(activeTab);
 
   return (
     <nav className="fixed top-0 left-0 w-full h-16 bg-white shadow-md z-50">
@@ -34,18 +37,17 @@ function Navbar() {
 
         {/* 中间四个页面按钮 */}
         <div className="flex gap-36 text-gray-700 font-medium">
-          <Link to="/" className="hover:text-green-600">
-            GREEN
-          </Link>
-          <Link to="/modern" className="hover:text-green-600">
-            MORDEN
-          </Link>
-          <Link to="/traditional" className="hover:text-green-600">
-            TRADITIONAL
-          </Link>
-          <Link to="/project" className="hover:text-green-600">
-            FIELD
-          </Link>
+          {tabs.map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`hover:text-green-600 transition ${
+                activeTab === tab ? "text-green-600 font-semibold" : ""
+              }`}
+            >
+              {tab.toUpperCase()}
+            </button>
+          ))}
         </div>
 
         {/* 搜索框 */}

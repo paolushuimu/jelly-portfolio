@@ -1,7 +1,7 @@
 const modernProjects = [
   {
-    id: "1",
-    page: "modern",
+    id: "lvguxinting",
+    page: "MODERN",
     title: "绿谷心庭",
     subtitle: "基于站城一体化的城市商务区综合体建筑设计",
     place: "北京市",
@@ -36,8 +36,8 @@ const modernProjects = [
     ],
   },
   {
-    id: "2",
-    page: "modern",
+    id: "diediele",
+    page: "MODERN",
     title: "叠叠乐",
     subtitle: "城市紧凑型集合住宅设计",
     place: "北京市海淀区北京交通大学家属区",
@@ -79,8 +79,8 @@ const modernProjects = [
     ],
   },
   {
-    id: "3",
-    page: "modern",
+    id: "lvyijingyuan",
+    page: "MODERN",
     title: "绿艺境园",
     subtitle: "京张“高线公园”西直门段13号线车站改造设计",
     place: "北京市海淀区西直门地铁站",
@@ -119,9 +119,9 @@ const modernProjects = [
     ],
   },
   {
-    id: "4",
+    id: "shanshuijian",
     title: "山水间",
-    page: "modern",
+    page: "MODERN",
     subtitle: "高速公路服务区设计",
     place: "北京市门头沟区西胡林村",
     time: "2023/11-2023/12",
