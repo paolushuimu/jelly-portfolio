@@ -94,7 +94,7 @@ const ProjectCard = forwardRef(
             {/* 项目首图 */}
             {isVisible && (
               <img
-                src={project.images[0].src}
+                src={project.images[0].small}
                 alt={project.title}
                 loading="lazy"
                 className="w-full ml-4 object-cover transition-transform duration-500 ease-in-out hover:scale-105"

@@ -11,6 +11,8 @@ const modernProjects = [
     images: [
       {
         src: new URL("../assets/projects/modern/01.png", import.meta.url).href,
+        small: new URL("../assets/projects/modern/small01.png", import.meta.url)
+          .href,
         ratio: 0.8,
       },
       {
@@ -46,6 +48,8 @@ const modernProjects = [
     images: [
       {
         src: new URL("../assets/projects/modern/11.png", import.meta.url).href,
+        small: new URL("../assets/projects/modern/small11.png", import.meta.url)
+          .href,
         ratio: 1.3,
       },
       {
@@ -90,6 +94,8 @@ const modernProjects = [
     images: [
       {
         src: new URL("../assets/projects/modern/31.png", import.meta.url).href,
+        small: new URL("../assets/projects/modern/small31.png", import.meta.url)
+          .href,
         ratio: 1.8,
       },
       {
@@ -130,6 +136,8 @@ const modernProjects = [
     images: [
       {
         src: new URL("../assets/projects/modern/21.png", import.meta.url).href,
+        small: new URL("../assets/projects/modern/small21.png", import.meta.url)
+          .href,
         ratio: 2,
       },
       {

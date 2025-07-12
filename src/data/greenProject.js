@@ -11,6 +11,8 @@ const greenProjects = [
     images: [
       {
         src: new URL("../assets/projects/green/01.png", import.meta.url).href,
+        small: new URL("../assets/projects/green/small01.png", import.meta.url)
+          .href,
         ratio: 1.5,
       },
       {
@@ -59,6 +61,8 @@ const greenProjects = [
     images: [
       {
         src: new URL("../assets/projects/green/11.png", import.meta.url).href,
+        small: new URL("../assets/projects/green/small11.png", import.meta.url)
+          .href,
         ratio: 1.5,
       },
       {
